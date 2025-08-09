@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  background-color: #0f0f0f;
+}
+
+main {
+  margin: auto;
+  background-color: #282828;
+  border-radius: 0.7em;
+}
+main > * {
+  display: none;
+}
+main > *.show {
+  display: block;
+}
+
+#choose-method {
+  font-size: 1em;
+  padding: 1em 2em 0.5em;
+}
+
+#choose-method .title {
+  font-weight: 600;
+  color: #eaeaea;
+  text-align: center;
+}
+
+#choose-method .method {
+  display: flex;
+  align-items: center;
+  height: 1.8em;
+  padding: 0 0.2em;
+  margin: 0.5em 1.7em;
+  border-radius: 1em;
+  overflow: hidden;
+  cursor: pointer;
+}
+main.tall #choose-method .method {
+  height: 2em;
+  margin: 0.5em 0.8em;
+}
+main.very-tall #choose-method .method {
+  height: 2.2em;
+  margin: 0.5em 0;
+}
+#choose-method .method span {
+  font-size: 0.75em;
+  font-weight: 500;
+}
+main.tall #choose-method .method span {
+  font-size: 0.85em;
+}
+main.very-tall #choose-method .method span {
+  font-size: 0.95em;
+}
+#choose-method .method * {
+  pointer-events: none;
+}
+
+#choose-method .method.bank {
+  background-color: #006c6c;
+  padding-left: 0.5em;
+}
+#choose-method .method.bank img {
+  height: 120%;
+}
+#choose-method .method.bank span {
+  color: #e6f0ef;
+}
+
+#choose-method .method.momo {
+  background-color: #a40063;
+  padding-left: 1em;
+}
+#choose-method .method.momo img {
+  height: 75%;
+}
+#choose-method .method.momo span {
+  margin-left: 1.3em;
+  color: #ffffff;
+}
+
+#bank {
+  font-size: 1em;
+  padding: 1em;
+}
+main.very-tall #bank {
+  font-size: 1.3em;
+}
+
+#bank img {
+  width: 15em;
+  border-radius: 1em;
+}
+
+#bank .copy {
+  color: #f2f2f2;
+  font-size: 0.75em;
+  font-weight: 500;
+  text-align: center;
+  border: 0.125em solid #f2f2f2;
+  margin-inline: 4em;
+  padding-block: 0.25em;
+  border-radius: 1em;
+  cursor: pointer;
+  user-select: none;
+}
+#bank .copy.hidden {
+  display: none;
+}
+#bank .copy.success {
+  border-color: #7fff00;
+  color: #7fff00;
+}
+#bank .copy.failure {
+  border-color: #ff0033;
+  color: #ff0033;
+}
+#bank .copy.success,
+#bank .copy.failure {
+  display: none;
+}
+#bank .copy.success.show,
+#bank .copy.failure.show {
+  display: block;
+}
+
+#momo {
+  font-size: 1em;
+  padding: 1em;
+}
+
+.back-to-choose-method svg {
+  display: block;
+  height: 1.25em;
+  fill: #f1f1f1;
+  cursor: pointer;
+}
