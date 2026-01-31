@@ -15,10 +15,21 @@ body {
   background-color: #0f0f0f;
 }
 
-main {
+#wrapper {
+  width: 100vmin;
+  height: 100vmin;
   margin: auto;
+  position: relative;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #282828;
   border-radius: 0.7em;
+  font-size: 4vmin;
 }
 main > * {
   display: none;
@@ -28,43 +39,28 @@ main > *.show {
 }
 
 #choose-method {
-  font-size: 1em;
+  font-size: 1.15em;
   padding: 1em 2em 0.5em;
+  width: 21.5em;
 }
-
 #choose-method .title {
   font-weight: 600;
   color: #eaeaea;
   text-align: center;
 }
-
 #choose-method .method {
   display: flex;
   align-items: center;
-  height: 1.8em;
+  height: 2em;
   padding: 0 0.2em;
-  margin: 0.5em 1.7em;
+  margin: 0.5em 1em;
   border-radius: 1em;
   overflow: hidden;
   cursor: pointer;
 }
-main.tall #choose-method .method {
-  height: 2em;
-  margin: 0.5em 0.8em;
-}
-main.very-tall #choose-method .method {
-  height: 2.2em;
-  margin: 0.5em 0;
-}
 #choose-method .method span {
   font-size: 0.75em;
   font-weight: 500;
-}
-main.tall #choose-method .method span {
-  font-size: 0.85em;
-}
-main.very-tall #choose-method .method span {
-  font-size: 0.95em;
 }
 #choose-method .method * {
   pointer-events: none;
@@ -89,16 +85,37 @@ main.very-tall #choose-method .method span {
   height: 75%;
 }
 #choose-method .method.momo span {
-  margin-left: 1.3em;
+  margin-left: 1.5em;
   color: #ffffff;
 }
 
+.back-to-choose-method svg {
+  display: block;
+  height: 1.25em;
+  fill: #f1f1f1;
+  cursor: pointer;
+}
+
+.text-button {
+  color: #f2f2f2;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-align: center;
+  border: 0.125em solid #f2f2f2;
+  border-radius: 0.6em;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+}
+
+/* BANK */
 #bank {
-  font-size: 1em;
   padding: 1em;
 }
-main.very-tall #bank {
-  font-size: 1.3em;
+@media (max-aspect-ratio: 2/3) {
+  #bank {
+    font-size: 1.3em;
+  }
 }
 
 #bank img {
@@ -107,16 +124,8 @@ main.very-tall #bank {
 }
 
 #bank .copy {
-  color: #f2f2f2;
-  font-size: 0.75em;
-  font-weight: 500;
-  text-align: center;
-  border: 0.125em solid #f2f2f2;
-  margin-inline: 4em;
-  padding-block: 0.25em;
-  border-radius: 1em;
-  cursor: pointer;
-  user-select: none;
+  margin-inline: 3.5em;
+  padding-block: 0.3em;
 }
 #bank .copy.hidden {
   display: none;
@@ -136,16 +145,4 @@ main.very-tall #bank {
 #bank .copy.success.show,
 #bank .copy.failure.show {
   display: block;
-}
-
-#momo {
-  font-size: 1em;
-  padding: 1em;
-}
-
-.back-to-choose-method svg {
-  display: block;
-  height: 1.25em;
-  fill: #f1f1f1;
-  cursor: pointer;
 }
