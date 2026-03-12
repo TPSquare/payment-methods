@@ -31,7 +31,7 @@ const bankCopyFailure = mainElement.querySelector("#bank .copy.failure");
 bankCopyButton.onclick = async () => {
   let ok;
   try {
-    await navigator.clipboard.writeText("8870829051");
+    await navigator.clipboard.writeText("040123996692");
     ok = true;
   } catch {
     ok = false;

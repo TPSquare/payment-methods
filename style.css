@@ -40,8 +40,9 @@ main > *.show {
 
 #choose-method {
   font-size: 1.15em;
-  padding: 1em 2em 0.5em;
-  width: 21.5em;
+  padding: 1em;
+  padding-bottom: 0.5em;
+  width: 20em;
 }
 #choose-method .title {
   font-weight: 600;
@@ -52,41 +53,62 @@ main > *.show {
   display: flex;
   align-items: center;
   height: 2em;
-  padding: 0 0.2em;
+  padding: 0 0.75em;
   margin: 0.5em 1em;
   border-radius: 1em;
   overflow: hidden;
   cursor: pointer;
 }
 #choose-method .method span {
-  font-size: 0.75em;
+  font-size: 0.8em;
   font-weight: 500;
 }
 #choose-method .method * {
   pointer-events: none;
 }
+#choose-method .method div {
+  display: flex;
+  flex: 1;
+}
+#choose-method .method img {
+  margin: auto;
+}
+#choose-method .method span {
+  flex: 2;
+  margin-left: 0.5em;
+}
 
 #choose-method .method.bank {
-  background-color: #006c6c;
-  padding-left: 0.5em;
+  background-color: #00579d;
 }
 #choose-method .method.bank img {
-  height: 120%;
+  width: 100%;
+  margin-bottom: 0.1em;
 }
 #choose-method .method.bank span {
-  color: #e6f0ef;
+  color: #FDFFFE;
+  padding-top: 0.1em;
 }
 
 #choose-method .method.momo {
   background-color: #a40063;
-  padding-left: 1em;
 }
 #choose-method .method.momo img {
-  height: 75%;
+  width: 31%;
 }
 #choose-method .method.momo span {
-  margin-left: 1.5em;
   color: #ffffff;
+}
+
+#choose-method .method.paypal {
+  background-color: #123984;
+}
+#choose-method .method.paypal img {
+  width: 70%;
+  margin-top: 0.1em;
+}
+#choose-method .method.paypal span {
+  color: #F5F5F5;
 }
 
 .back-to-choose-method svg {
@@ -110,7 +132,7 @@ main > *.show {
 
 /* BANK */
 #bank {
-  padding: 1em;
+  padding: 0.5em 1em;
 }
 @media (max-aspect-ratio: 2/3) {
   #bank {
@@ -119,12 +141,12 @@ main > *.show {
 }
 
 #bank img {
-  width: 15em;
+  width: 14em;
   border-radius: 1em;
 }
 
 #bank .copy {
-  margin-inline: 3.5em;
+  margin-inline: 3em;
   padding-block: 0.3em;
 }
 #bank .copy.hidden {
@@ -145,4 +167,22 @@ main > *.show {
 #bank .copy.success.show,
 #bank .copy.failure.show {
   display: block;
+}
+
+/* PAYPAL */
+#paypal {
+  padding: 1em;
+  padding-top: 0.5em;
+}
+#paypal img {
+  width: 15em;
+  border-radius: 1em;
+}
+#paypal span {
+  display: inline-block;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-size: 0.9em;
+  width: 100%;
+  text-align: center;
 }

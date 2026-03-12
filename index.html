@@ -1,37 +1,49 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TPSquare Payment Methods</title>
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
 
-  <body>
-    <div id="wrapper">
-      <main>
-        <div id="choose-method">
-          <div class="title">CHỌN MỘT HÌNH THỨC THANH TOÁN</div>
-          <div class="method bank">
-            <img src="./assets/bidv-logo.jpg" alt="Ngân hàng" />
-            <span>Chuyển khoản qua ngân hàng</span>
-          </div>
-          <div class="method momo">
-            <img src="./assets/momo-logo.jpg" alt="Momo" />
-            <span>Ví điện tử MoMo</span>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TPSquare Payment Methods</title>
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-        <div id="bank">
-          <div class="back-to-choose-method"></div>
-          <img src="./assets/bank-transfer-information.jpg" alt="Thông tin chuyển khoản" />
-          <div class="copy text-button">Sao chép số tài khoản</div>
-          <div class="copy text-button success">Sao chép thành công</div>
-          <div class="copy text-button failure">Sao chép thất bại</div>
+<body>
+  <div id="wrapper">
+    <main>
+      <div id="choose-method">
+        <div class="title">CHỌN MỘT HÌNH THỨC THANH TOÁN</div>
+        <div class="method bank">
+          <div><img src="./assets/sacombank_logo.jpg" alt="Ngân hàng" /></div>
+          <span>Chuyển khoản ngân hàng</span>
         </div>
-      </main>
-    </div>
-    <script type="module" src="./script.js"></script>
-  </body>
+        <div class="method momo">
+          <div><img src="./assets/momo-logo.jpg" alt="Momo" /></div>
+          <span>Ví điện tử MoMo</span>
+        </div>
+        <div class="method paypal">
+          <div><img src="./assets/paypal-logo.jpg" alt="Paypal" /></div>
+          <span>Pay with PayPal</span>
+        </div>
+      </div>
+
+      <div id="bank">
+        <div class="back-to-choose-method"></div>
+        <img src="./assets/bank-transfer-information.jpg" alt="Thông tin chuyển khoản" />
+        <div class="copy text-button">Sao chép số tài khoản</div>
+        <div class="copy text-button success">Sao chép thành công</div>
+        <div class="copy text-button failure">Sao chép thất bại</div>
+      </div>
+
+      <div id="paypal">
+        <div class="back-to-choose-method"></div>
+        <img src="./assets/paypal-transfer-information.jpg" alt="Thông tin chuyển khoản" />
+        <span>Pay with PayPal</span>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+
 </html>
