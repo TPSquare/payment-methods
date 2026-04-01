@@ -53,7 +53,7 @@ main > *.show {
   display: flex;
   align-items: center;
   height: 2em;
-  padding: 0 0.75em;
+  padding: 0 0.7em;
   margin: 0.5em 1em;
   border-radius: 1em;
   overflow: hidden;
